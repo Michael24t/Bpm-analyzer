@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\audio_project",
+    "\\scripts",
+    "\\src",
+    "\\src\\dsp",
+    "\\tests"
+  ],
+  "SelectedNode": "\\tests\\test_features.py",
+  "PreviewInSolutionExplorer": false
+}

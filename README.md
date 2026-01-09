@@ -34,21 +34,33 @@ Install dependencies withing requirement.txt and requirement-extra.txt
 ```bash
   uvicorn app.main:app --reload
 ```
-    
-## Deployment
-
-Proof of deployment to AWS 
-
-![AWS ECS API](Deployment/ECS-API.png)
-![AWS ECR image](Deployment/ECR-image.png)
-![S3 bucket results](Deployment/S3-bucket.png)
-
 
 ## Demo 
 
 - Fully working locally
-- AWS cluster is currently paused for cost control. Please reach out to the email below if you would like me to turn everything back on for a demo.
-- mikey724t@hotmail.com 
+- AWS cluster is currently paused for cost control. See deployment information below or reach out to mikey724t@hotmail.com if you would like me to turn everything back on for a demo.
+
+    
+## Deployment
+
+Proof of deployment to AWS 
+### ECS Cluster - Live API Deployment 
+![AWS ECS API](Deployment/ECS-API.png)
+ECS Fargate service successfully deploying the BPM Analyzer API behind an
+Application Load Balancer. The container runs inside a Fargate task using
+awsvpc networking, exposing port 8000 to the load balancer listener on port 80.
+The service automatically registers tasks with the target group, performs
+health checks, and replaces failing tasks to ensure continuous availability.
+ 
+### ECR Container Registry
+![AWS ECR image](Deployment/ECR-image.png)
+ECR storing docker images containerized into AWS. Each time the application is rebuilt, the container is
+tagged and pushed to ECR, where ECS pulls the latest revision to run inside
+Fargate. This allows for consistent repoducible runtime enviroments. 
+
+### S3 File Storage
+![S3 bucket results](Deployment/S3-bucket.png)
+S3 bucket results showing all the processed audio files that people have uploaded to the analyzer. Demonstrates cloud-native storage integration between my API and AWS services
 
 
 ## Future integration

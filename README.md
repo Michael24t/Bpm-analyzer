@@ -23,10 +23,10 @@ A web-based tool that analyzes uploaded audio files, extracts tempo (BPM), RMS, 
 
 User -> LoadBalancer -> ECS_Task -> FastAPI Container -> S3 bucket
 
--ECS launches docker container which is running fastAPI among all other dependencies in requirments.txt
-- Load balancer will forward HTTP requests to container 
-- All uploaded files go to S3 
-- API will process audio and return BPM 
+1. ECS launches docker container which is running fastAPI among all other dependencies in requirments.txt
+2. Load balancer will forward HTTP requests to container 
+3. All uploaded files go to S3 
+4. API will process audio and return BPM 
 ## For Running Locally 
 
 Install dependencies withing requirement.txt and requirement-extra.txt 
@@ -39,9 +39,9 @@ Install dependencies withing requirement.txt and requirement-extra.txt
 
 Proof of deployment to AWS 
 
-![AWS ECS API](Bpm-analyzer/Deployment/ECS API.png)
-![AWS ECR image](Bpm-analyzer/Deployment/ECR image.png)
-![S3 bucket results](Bpm-analyzer/Deployment/S3 bucket.png)
+![AWS ECS API](Deployment/ECS API.png)
+![AWS ECR image](Deployment/ECR image.png)
+![S3 bucket results](Deployment/S3 bucket.png)
 
 
 ## Demo 

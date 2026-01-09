@@ -39,9 +39,9 @@ Install dependencies withing requirement.txt and requirement-extra.txt
 
 Proof of deployment to AWS 
 
-![AWS ECS API](Deployment/ECS API.png)
-![AWS ECR image](Deployment/ECR image.png)
-![S3 bucket results](Deployment/S3 bucket.png)
+![AWS ECS API](Deployment/ECS-API.png)
+![AWS ECR image](Deployment/ECR-image.png)
+![S3 bucket results](Deployment/S3-bucket.png)
 
 
 ## Demo 
